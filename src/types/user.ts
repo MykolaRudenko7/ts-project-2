@@ -1,4 +1,4 @@
-export type TGithubUser = {
+export type TGitHubUser = {
   login: string;
   id: number;
   avatar_url: string;
@@ -23,13 +23,13 @@ export type TLocalUser = {
   company: string;
   blog: string;
   location: string;
-  email: string;
+  // email: string;
   bio: string;
   twitter: string;
-  public: number;
+  repos: number;
   followers: number;
   following: number;
-  created_at: string;
+  created: string;
 };
 
 export type TUserError = {
