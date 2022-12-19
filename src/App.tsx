@@ -22,6 +22,8 @@ function App() {
     // перевірка typeGuard
     if (isGitHubUser(user)) {
       // перевожу тип у лоальний
+      console.log(user);
+
       setUser(extractLocalUser(user))
     } else {
       setUser(null)
