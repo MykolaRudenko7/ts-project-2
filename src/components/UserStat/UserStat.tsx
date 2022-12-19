@@ -1,6 +1,8 @@
 import { TLocalUser } from 'types';
+
 import styles from './UserStat.module.scss';
 
+// беру 3 значення з типу
 export interface UserStartProps extends Pick<TLocalUser, 'repos' | 'followers' | 'following'> {}
 
 export const UserStart = ({ repos, following, followers }: UserStartProps) => {

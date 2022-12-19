@@ -14,23 +14,25 @@ type FormFields = {
 };
 
 export const SearchPanel = ({ hasError, onSubmit }: SearchPanelProps) => {
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement & FormFields>) => {
     e.preventDefault();
     const textInput = e.currentTarget.username.value;
 
-    if (textInput) {
+    if (textInput.trim()) {
       onSubmit(textInput);
       e.currentTarget.reset();
     }
   };
 
   return (
-    <form action="submit" onSubmit={handleSubmit} autoComplete="off">
+    <form action="submit" onSubmit={handleSubmit}>
       <div className={styles.searchPanel}>
         <label htmlFor="search" className={styles.label}>
           <SearchIcon />
         </label>
         <input
+          autoComplete="off"
           type="text"
           className={styles.textField}
           id="search"

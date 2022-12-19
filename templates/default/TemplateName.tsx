@@ -10,7 +10,7 @@ export const TemplateName = ({}: TemplateNameProps) => {
 
 
   return (
-  <div className={styles.TemplateName}>
+  <div className={styles.templateName}>
     TemplateName Component
     </div>
   );
